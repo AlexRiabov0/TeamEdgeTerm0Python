@@ -13,6 +13,15 @@ print("------------------- Challenge 1 -------------------")
    # Write conditional statements that print out whether you can drive in your city. 
 
 
+num=int(input("hi "))
+print(num)
+if(num >= 17):{
+print("Yes, you can")
+}
+else:{
+print("No, you cant")
+}
+
 
 
 
