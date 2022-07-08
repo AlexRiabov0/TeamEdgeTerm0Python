@@ -12,26 +12,14 @@ print("------------------- Challenge 1 -------------------")
    # Prompt the user to enter their age.
    # Write conditional statements that print out whether you can drive in your city. 
 
-
-num=int(input("hi "))
-print(num)
+print("Hi")
+num=int(input())
 if(num >= 17):{
 print("Yes, you can")
 }
 else:{
 print("No, you cant")
 }
-
-
-
-
-
-
-
-
-
-
-
 
 # -------------------------------------------- 
 
@@ -41,6 +29,13 @@ print("------------------- Challenge 2 -------------------")
    # Write conditional statements that checks which is the highest and prints the highest score. 
    # Hint: Create three variables and assign them random scores. 
 
+first = 100
+second = 200
+third = 300
+
+if(first > second and first > third):{print(first)}
+elif(second > first and second > third): print(second)
+elif(third > first and third > second): print(third)
 
 
 
@@ -70,16 +65,15 @@ print("------------------- Challenge 3 -------------------")
 # Here's a variable to get you started:
 weather = "rainy"
 
-
-
-
-
-
-
-
-
-
-
+if(weather == "rainy"):{
+   print("Bring an umbrella")
+}
+elif(weather == "Sunny"):{
+   print("Wear a hat and sunglasses")
+}
+elif(weather == "Snowing"):{
+   print("ear gloves and a scarf ")
+}
 
 
 # Tip: Try changing the value of the weather variable to test your other conditions.
@@ -95,15 +89,39 @@ weather = "rainy"
    # Make sure to account for at least three different temperatures!
    # Hint: You will need another variable to keep track of the temperature.
 
+weather = "Sunny"
+temperature = 110
+
+if(weather == "rainy" and temperature >= 60):{
+   print("Bring your umbrella and wear a light jacket.")
+}
+elif(weather == "rainy" and temperature >= 40 and temperature < 60):{
+   print("Break out a warmer jacket with your umbrella instead.")
+}
+elif(weather == "rainy" and temperature <= 40):{
+   print("Bring an umbrella and jecket under 40")
+}
 
 
+elif(weather == "Sunny" and temperature >= 90):{
+   print("Wear a hat and sunglasses more 90")
+}
+elif(weather == "Sunny" and temperature >= 60 and temperature < 90):{
+   print("Wear a hat and sunglasses under 90")
+}
+elif(weather == "Sunny" and temperature <= 60):{
+   print("Wear a hat and sunglasses under 60")
+}
 
-
-
-
-
-
-
+elif(weather == "Snowing" and temperature >= 50):{
+   print("ear gloves and a scarf more 50")
+}
+elif(weather == "Snowing" and temperature >= 40 and temperature < 50):{
+   print("ear gloves and a scarf under 50")
+}
+elif(weather == "Snowing" and temperature <= 20):{
+   print("ear gloves and a scarf under 20")
+}
 
 
 # -------------------------------------------- 
@@ -119,8 +137,39 @@ print("------------------- Challenge 4 -------------------")
 
 
 
+print("day")
+day = int(input())
 
+# mon = 1
+# tue = 2
+# wed = 3
+# thu = 4
+# fri = 5
+# sur = 6
+# sun = 7
 
+# if(day > 7 and day <1):{print("wrong day")}
+# else:{
+#    switcher = {
+#         mon: print("mon"),
+#         tue: print("tue"),
+#         wed: print("wed"),
+#         thu: print("thu"),
+#         fri: print("fri"),
+#         sur: print("sur"),
+#         sun: print("sun"),
+#       #   if(day > 7 and day <1):{print("wrong day")}
+#     }
+# }
+
+if(day > 7 or day <1):{print("wrong day")}
+elif(day == 1):{print("mon")}
+elif(day == 2):{print("tue")}
+elif(day == 3):{print("wed")}
+elif(day == 4):{print("thu")}
+elif(day == 5):{print("fri")}
+elif(day == 6):{print("sat")}
+elif(day == 7):{print("sun")}
 
 
 
@@ -142,7 +191,16 @@ print("------------------- Challenge 5 -------------------")
 # Your challenge is to translate the steps above into conditionals which will evaluate if the 
 # year stored in a variable is/was a leap year.
 
+print("Input year")
+year = int(input())
 
+step_1 = year%4 == 0
+step_2 = year%100 == 0
+step_2_1 = year%100 != 0
+step_3 = year%400 == 0
+if(step_3 and step_2 and step_1):{print("366")}
+elif(step_2_1):{print("366 too")}
+else:{print("not")}
 
 
 
