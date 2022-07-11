@@ -11,38 +11,46 @@
 
   # -------------------------------------------- 
 
-print("My Simple Calculator")
+# print("My Simple Calculator")
 
-# -------------------------------------------- 
+# def check_answers(gen_answer, correct_answer):
+#     if gen_answer == correct_answer:
+#         print("Your code works!")
+#     else:
+# 	    print(f"Try again, your code generated {gen_answer} but the correct answer is {correct_answer}")
+# # -------------------------------------------- 
 
-# Part 1: 
+# # Part 1: 
 
-	# The first features of any simple calculator is that
-	# it should be able to perform the basic math operations. 
-	# Let's start by writing the functions we'll need to execute 
-	# the following operations:
+# 	# The first features of any simple calculator is that
+# 	# it should be able to perform the basic math operations. 
+# 	# Let's start by writing the functions we'll need to execute 
+# 	# the following operations:
 
-		# Addition
-		# Subtraction
+# 		# Addition
+# 		# Subtraction
 
-# -------------------------------------------- 
+# # -------------------------------------------- 
 
-# Write a function called add_numbers that will take two numbers and return the sum.
+# # Write a function called add_numbers that will take two numbers and return the sum.
 
-
-
-
-
-
-
-# Write a function called sub_numbers that will take two numbers and return the difference.
+# def add_numbers(check_answers_1,check_answers_2):
+#     # print(check_answers_1 + check_answers_2)
+#     return(check_answers_1 + check_answers_2)
+    	
 
 
 
 
+# # Write a function called sub_numbers that will take two numbers and return the difference.
 
-# ------------
-# Testing Code - Uncomment the code below to test your code!
+# def sub_numbers(check_answers_1,check_answers_2):
+#     return(check_answers_1 - check_answers_2)
+
+
+
+# # ------------
+# # Testing Code - Uncomment the code below to test your code!
 
 # check_answers(add_numbers(5, 15), 20)
 # check_answers(add_numbers(3, 18), 21)
@@ -52,44 +60,46 @@ print("My Simple Calculator")
 # check_answers(sub_numbers(11, 9), 2)
 # check_answers(sub_numbers(18, 21), -3)
 
-# -------------------------------------------- 
+# # -------------------------------------------- 
 
-# Part 2: 
+# # Part 2: 
 
-	# Now that you have addition and subtraction down, let's add the other operators we learned!
+# 	# Now that you have addition and subtraction down, let's add the other operators we learned!
 
-	# Finish off your basic calculator by writing the functions 
-	# for the following operations:
+# 	# Finish off your basic calculator by writing the functions 
+# 	# for the following operations:
 
-		# Multiplication
-		# Division 
+# 		# Multiplication
+# 		# Division 
 
-# -------------------------------------------- 
+# # -------------------------------------------- 
 
-# Write a function called multiply_numbers that will take two numbers and return the product.
+# # Write a function called multiply_numbers that will take two numbers and return the product.
 
-
-
-
-
-
-# Write a function called divide_numbers that will take two numbers and return the quotient.
+# def multiply_numbers(check_answers_1,check_answers_2):
+#     return(check_answers_1 * check_answers_2)
 
 
 
 
+# # Write a function called divide_numbers that will take two numbers and return the quotient.
+
+# def divide_numbers(check_answers_1,check_answers_2):
+#     return(check_answers_1 / check_answers_2)
 
 
-# ------------
-# Testing Code - Uncomment the code below to test your code!
+
+
+# # ------------
+# # Testing Code - Uncomment the code below to test your code!
 
 # check_answers(multiply_numbers(10, 3), 30); 
 # check_answers(multiply_numbers(21, 7), 147);
 # check_answers(multiply_numbers(4, 16), 64); 
 
-# check_answers(divide_numbers(24, 100), `.24`);
-# check_answers(divide_numbers(21, 7), `3`);
-# check_answers(divide_numbers(15, 4), `3.75`);
+# check_answers(divide_numbers(24, 100), 0.24);
+# check_answers(divide_numbers(21, 7), 3);
+# check_answers(divide_numbers(15, 4), 3.75);
 
 # -------------------------------------------- 
 
@@ -102,9 +112,57 @@ print("My Simple Calculator")
 
 # -------------------------------------------- 
 
+# evrything ahead is working
 
+#function to input and return first number
+def input_num_1():
+        print("Input first num")
+        num_1 = int(input())
+        return(num_1)
 
+#function to input and return second number
+def input_num_2():
+        print("Input second num")
+        num_2 = int(input())
+        return(num_2)
 
+# Addition function 
+def add_numbers(check_answers_1,check_answer_2):
+    answer = check_answers_1 + check_answer_2
+    print(answer)
+    return(answer)
+
+# Subtraction function    	
+def sub_numbers(check_answers_1,check_answer_2):
+    answer = check_answers_1 - check_answer_2
+    print(answer)
+    return(answer)
+
+# multiply function
+def multiply_numbers(check_answers_1,check_answer_2):
+    answer = check_answers_1 * check_answer_2
+    print(answer)
+    return(answer)
+
+#divide function
+def divide_numbers(check_answers_1,check_answer_2):
+    answer = check_answers_1 / check_answer_2
+    print(answer)
+    return(answer)
+
+#function to choose operation(main)
+def input_fun():
+    print("Which operation you want to do")
+    print("The sum (+) the devided(/),(-) and (*)")
+    choose_fun = str(input())
+    if (choose_fun == "+"): add_numbers(input_num_1(),input_num_2())
+    elif (choose_fun == "-"): sub_numbers(input_num_1(),input_num_2())
+    elif (choose_fun == "*"): multiply_numbers(input_num_1(),input_num_2())
+    elif (choose_fun == "/"): divide_numbers(input_num_1(),input_num_2())
+    else:{print("wrong")}
+		
+    	
+input_fun()
 
 
 
@@ -164,8 +222,3 @@ print("My Simple Calculator")
 # -------------------------------------------- 
 # Ignore this section. This is just for checking your work
 
-def check_answers(gen_answer, correct_answer):
-    if gen_answer == correct_answer:
-        print("Your code works!")
-    else:
-	    print(f"Try again, your code generated {gen_answer} but the correct answer is {correct_answer}")
