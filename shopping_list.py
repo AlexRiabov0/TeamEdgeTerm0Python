@@ -12,17 +12,17 @@
  # 
  # ***************************************************************/
 
+
 active = True
+item = "orange"
+welcome_message = "Hi! I'm your shopping assistant. What can I add or remove from your shopping list? \n"
 
 print("Welcome to Shopping List!")
-
-welcome_message = "Hi! I'm your shopping assistant. Let me take your order. \n You can type 'add milk' to add milk to your shopping list. \n or you can type 'remove milk' to remove it. \n"
-
 print(welcome_message)
 
 
 #-->Todo: declare a shopping_list list
-
+shopping_list = ["milk" , "eggs" , "flour" , "orange"]
 
 def prompt_user():
 
@@ -31,16 +31,18 @@ def prompt_user():
     return reply
 
 def check_answer(ans):
-    pass
-
+    if item in shopping_list:
+        remove_item(item)
+    else:
+        add_item()
 
 def add_item():
 #this function can take in a string and store it in an array
     pass
-
+    shopping_list.append(item)
 
 def remove_item():
-    pass
+    shopping_list.remove(item)
 
 while active:
 
