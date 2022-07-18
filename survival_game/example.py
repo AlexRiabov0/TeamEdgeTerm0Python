@@ -185,6 +185,17 @@ exit.npcs=[]
 exit.key = ""
 
 #add the rooms to the rooms list
+
+# locations.append(city)
+# locations.append(town)
+# locations.append(middle_of_forest)
+# locations.append(clearing)
+# locations.append(wise_man)
+# locations.append(stream)
+# locations.append(camp)
+# locations.append(cave)
+# locations.append(field)
+
 rooms.append(kitchen)
 rooms.append(bathroom)
 rooms.append(living_room)
